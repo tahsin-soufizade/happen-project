@@ -22,3 +22,34 @@ headerNavbar.addEventListener("click", (e) => {
     document.body.style.overflow = "auto";
   }
 });
+
+// fixed header when scroll
+const bottomHeader = document.querySelector("#bottom-header");
+
+window.addEventListener("scroll", (e) => {
+  if (window.pageYOffset > 105) {
+    bottomHeader.classList.add("fixed-header");
+  } else {
+    bottomHeader.classList.remove("fixed-header");
+  }
+});
+
+const swiper = new Swiper(".comments-slider", {
+  slidesPerView: 1,
+  spaceBetween: 60,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1100: {
+      slidesPerView: 3,
+      simulateTouch: false,
+    },
+  },
+  speed: 1600,
+  autoplay: true,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
+swiper.update();

@@ -9,6 +9,10 @@
   --secondary-color: #c2bcb0;
 }
 
+html {
+  direction: rtl;
+}
+
 body {
   font-family: vazir, Verdana, Geneva, Tahoma, sans-serif;
 }
