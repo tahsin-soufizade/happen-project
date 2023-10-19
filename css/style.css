@@ -255,13 +255,6 @@ header #main-header .main-header-buttons-wrapper #services-btn:hover {
   }
 }
 
-.services-container .services-title {
-  text-align: center;
-  margin-top: 1rem;
-  font-weight: bold;
-  font-size: 2.6rem;
-}
-
 .services-container .service-item {
   background: #fff;
   padding: 3rem 1.8rem;
@@ -297,5 +290,117 @@ header #main-header .main-header-buttons-wrapper #services-btn:hover {
 }
 
 .services-container .diffrent-service-item .service-item-title {
+  color: #fff;
+}
+
+/*-------------------- SPECIAL SERVICES STYLES --------------------*/
+.special-services-container {
+  margin-top: 2.5rem;
+}
+
+.special-services-container .special-service-item {
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 8%);
+  margin-bottom: 1rem;
+}
+
+.special-services-container .special-service-img-wrapper {
+  position: relative;
+}
+
+/* icon pattern */
+.special-services-container .icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding: 17px 35px 17px 23px;
+  left: 6%;
+  bottom: -9%;
+  filter: drop-shadow(0 0 35px rgba(0, 0, 0, 0.08));
+  z-index: 1;
+}
+
+.special-services-container .icon-wrapper::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  clip-path: polygon(0 1%, 85% 0, 100% 100%, 0 100%);
+  border-radius: 10px 26px 10px 10px;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+.special-services-container .icon-wrapper .service-icon {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  transition: all 0.4s;
+  z-index: 2;
+}
+
+.special-services-container .special-service-item:hover .icon-wrapper::after {
+  background: var(--primary-color);
+}
+
+.special-services-container .special-service-item:hover .service-icon {
+  color: #fff;
+}
+
+.special-services-container .special-service-item:hover,
+.special-services-container .special-service-item:hover p {
+  color: #fff !important;
+}
+
+.special-services-container .special-service-content {
+  position: relative;
+  overflow: hidden;
+  background: #f9f9f9;
+  transition: all 0.4s;
+  padding-top: 3.5rem;
+}
+
+.special-services-container .special-service-content::after {
+  content: "";
+  position: absolute;
+  background: var(--primary-color);
+  width: 100%;
+  transition: all 0.4s;
+  height: 3px;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.special-services-container
+  .special-service-item:hover
+  .special-service-content::after {
+  height: 100%;
+}
+
+.special-services-container
+  .special-service-item:hover
+  .special-service-content {
+  background: transparent;
+}
+
+.special-services-container .special-service-item:hover .special-service-text {
+  transition: all 0.3s;
+}
+
+.special-services-container .special-service-item .read-more-btn {
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 0.4rem 0;
+  margin-top: 1rem;
+}
+
+.special-services-container .special-service-item .read-more-btn:hover {
+  padding-right: 0.6rem;
+}
+
+.special-services-container .special-service-item:hover .read-more-btn {
   color: #fff;
 }
