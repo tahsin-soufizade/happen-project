@@ -1,0 +1,28 @@
+header #bottom-header .under-menu-list {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-us-container {
+  margin: 2.3rem 0;
+}
+
+.about-us-container .about-us-title {
+  text-align: center;
+  font-size: 2.2rem;
+  position: relative;
+  margin-bottom: 3.7rem;
+}
+
+.about-us-container .about-us-title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background: #999;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+p {
+}
